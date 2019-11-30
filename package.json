@@ -1,0 +1,27 @@
+{
+  "name": "snake",
+  "version": "1.0.0",
+  "description": "The Vintage Snake Game we all had on our phone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rob-bar/snake.git"
+  },
+  "keywords": [
+    "Game",
+    "Javascript",
+    "Css",
+    "Html",
+    "Snake",
+    "Vintage"
+  ],
+  "author": "Robbie Bardijn",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/rob-bar/snake/issues"
+  },
+  "homepage": "https://github.com/rob-bar/snake#readme"
+}
