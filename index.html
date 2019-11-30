@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Snake</title>
+
+    <meta name="Author" content="Robbie Bardijn" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta
+      name="keywords"
+      content="Snake, Game, Eat fruits, Canvas, Javascript"
+    />
+    <meta
+      name="description"
+      content="Check out this awesome Snake game. Try to eat as many fruits."
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="images/tetris/tetris_ico.png"
+    />
+    <link rel="stylesheet" type="text/css" href="css/canvassnakestyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/browsererror.css" />
+
+    <script type="text/javascript" src="js/jquery/jQuery_.js"></script>
+    <script type="text/javascript" src="js/modernizer/modernizr.js"></script>
+    <script
+      type="text/javascript"
+      src="js/easing/jquery.easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/backgroundposition/jquery.backgroundPosition.js"
+    ></script>
+
+    <script type="text/javascript" src="js/util/utilFunctions.js"></script>
+    <script type="text/javascript" src="js/util/SecMinTimer.js"></script>
+
+    <script type="text/javascript" src="js/canvassnake/Game.js"></script>
+    <script
+      type="text/javascript"
+      src="js/canvassnake/InfinitHunger.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/canvassnake/TakeThePosition.js"
+    ></script>
+    <script type="text/javascript" src="js/canvassnake/Snake.js"></script>
+    <script type="text/javascript" src="js/canvassnake/BodyPart.js"></script>
+    <script type="text/javascript" src="js/canvassnake/Level.js"></script>
+    <script type="text/javascript" src="js/canvassnake/Fruit.js"></script>
+    <script type="text/javascript" src="js/MasterSnake.js"></script>
+  </head>
+  <body>
+    <div id="bg"></div>
+    <div id="content">
+      <div id="browser-error">
+        <h2>Download a better browser</h2>
+        <h1>Browser too old or too stupid</h1>
+        <div id="browser-error-container">
+          <a
+            href="http://www.mozilla.org/en-US/firefox/new/"
+            target="_blank"
+            id="browser-l-1"
+            ><span class="hide">Firefox</span></a
+          >
+          <a
+            href="http://www.apple.com/safari/"
+            target="_blank"
+            id="browser-l-2"
+            ><span class="hide">Safari</span></a
+          >
+          <a
+            href="https://www.google.com/chrome"
+            target="_blank"
+            id="browser-l-3"
+            ><span class="hide">Chrome</span></a
+          >
+          <a
+            href="http://www.opera.com/download/"
+            target="_blank"
+            id="browser-l-4"
+            ><span class="hide">Opera</span></a
+          >
+        </div>
+      </div>
+      <canvas id="canvas" width="1000" height="575"
+        >Your Browser does not support HTML5 Canvas.</canvas
+      >
+
+      <div id="buttons-introscreen">
+        <a href="#" id="btn-1">Play Game</a>
+        <div id="keys-expl">use the arrows on the keyboard to move</div>
+      </div>
+      <div id="ingame">
+        <div id="buttons-ingame"></div>
+
+        <div id="general-share-buttons"></div>
+        <div id="scoreboard">
+          <p id="info-1">score 0</p>
+          <p id="info-2"><span>lifes&nbsp;</span></p>
+          <p id="info-3">time 00 : 00</p>
+        </div>
+      </div>
+      <div id="game-over">
+        <div id="game-over-head"></div>
+        <p id="game-over-score">SCORE : 25400</p>
+        <div id="game-over-buttons">
+          <a href="#" class="b_btn" id="btn-1-game-over"
+            ><span class="hide">replay</span></a
+          >
+        </div>
+      </div>
+
+      <div id="score-board">
+        <div id="score-board-head"></div>
+        <div id="score-board-btnup" class="score-board-btn"></div>
+        <div id="score-board-btndown" class="score-board-btn"></div>
+        <table id="score-board-tbl1">
+          <tr>
+            <th class="col1">Rank</th>
+            <th class="col2">Score</th>
+            <th class="col3">Time</th>
+            <th class="col4">Name</th>
+            <th class="col5">Entry Date</th>
+          </tr>
+        </table>
+
+        <div id="tbl-container">
+          <table id="score-board-tbl2">
+            <!-- APPEND SCORES HERE -->
+          </table>
+        </div>
+        <div id="score-board-buttons">
+          <a href="#" class="b_btn" id="btn-1-score-board"
+            ><span class="hide">replay</span></a
+          >
+        </div>
+      </div>
+
+      <p id="footer">
+        <a href="<?php echo(base_url()) ?>">Robbie Bardijn</a> &copy;
+        <span class="current-year"></span> | Snake
+      </p>
+    </div>
+    <script>
+      var date = new Date().getFullYear();
+      var dateEl = document.querySelector('.current-year');
+      dateEl.innerText = date;
+    </script>
+  </body>
+</html>

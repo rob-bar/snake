@@ -1,0 +1,707 @@
+/*
+    Document   : canvassnakestyle
+    Created on : 11-okt-2011, 11:57:19
+    Author     : robbie
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@font-face {
+	font-family: 'Conv_HelveticaNeueLTCom-Bd';
+	src: url('../fonts/HelveticaNeueLTCom-Bd.eot');
+	src: local(',ò∫'), url('../fonts/HelveticaNeueLTCom-Bd.woff') format('woff'),
+		url('../fonts/HelveticaNeueLTCom-Bd.ttf') format('truetype'),
+		url('../fonts/HelveticaNeueLTCom-Bd.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HelveticaNeueLTCom-BlkCn';
+	src: url('../fonts/HelveticaNeueLTCom-BlkCn.eot');
+	src: local('‚ò∫'),
+		url('../fonts/HelveticaNeueLTCom-BlkCn.woff') format('woff'),
+		url('../fonts/HelveticaNeueLTCom-BlkCn.ttf') format('truetype'),
+		url('../fonts/HelveticaNeueLTCom-BlkCn.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HelveticaNeueLTCom-HvCn';
+	src: url('../fonts/HelveticaNeueLTCom-HvCn.eot');
+	src: local('‚ò∫'), url('../fonts/HelveticaNeueLTCom-HvCn.woff') format('woff'),
+		url('../fonts/HelveticaNeueLTCom-HvCn.ttf') format('truetype'),
+		url('../fonts/HelveticaNeueLTCom-HvCn.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HelveticaNeueLTCom-Md';
+	src: url('../fonts/HelveticaNeueLTCom-Md.eot');
+	src: local('‚ò∫'), url('../fonts/HelveticaNeueLTCom-Md.woff') format('woff'),
+		url('../fonts/HelveticaNeueLTCom-Md.ttf') format('truetype'),
+		url('../fonts/HelveticaNeueLTCom-Md.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+p,
+form,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+html,
+body,
+input,
+button,
+textarea {
+	margin: 0;
+	padding: 0;
+}
+
+.hide {
+	left: -10000px;
+	position: absolute;
+}
+
+a,
+input,
+textarea,
+button {
+	outline: none;
+}
+
+a img {
+	border: none;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 100%;
+}
+
+cufon {
+	text-indent: 0 !important;
+}
+
+#content {
+	padding: 0;
+	margin: 0 0 0 -500px;
+	width: 1000px;
+	left: 50%;
+	position: absolute;
+}
+
+#bg {
+	width: 3000px;
+	height: 800px;
+	padding: 0;
+	margin: 0 0 0 -1500px;
+	left: 50%;
+	position: fixed;
+	background: #ffffff url('../images/snakeAssets/bg.jpg') no-repeat;
+}
+
+#buttons-introscreen {
+	position: absolute;
+	width: 168px;
+	height: 130px;
+	left: 50%;
+	top: 0px;
+	margin: 295px 0 0 -84px;
+}
+#keys-expl {
+	position: relative;
+	display: block;
+	width: 78px;
+	background: url('../images/snakeAssets/arrowkeys.png') no-repeat 0 0;
+	font-size: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #b3b3b3;
+	text-align: center;
+	padding-top: 45px;
+	margin: 100px 41px;
+}
+#btn-1 {
+	position: relative;
+	display: block;
+	width: 168px;
+	padding: 10px 0;
+	font-weight: bold;
+	text-shadow: 1px 1px #000;
+	box-shadow: 0 3px 0 0 #5f0314;
+	text-decoration: none;
+	background: linear-gradient(#b00a42, #8d0020);
+	border-radius: 30px;
+	text-align: center;
+	color: #FFF;
+}
+
+#btn-1:hover {
+	background: linear-gradient(#b00a42, #7f0521);
+	box-shadow: 0 1px 0 0 #5f0314;
+	top: 2px;
+}
+
+#btn-1:hover {
+	background-position: -168px 0;
+}
+
+#btn-2 {
+	position: relative;
+	display: block;
+	width: 200px;
+	height: 58px;
+	top: -5px;
+	background: url('../images/snakeAssets/btn_2.png') no-repeat 0 0;
+	background-position: -338px 0;
+	cursor: auto;
+}
+
+/*#btn-2:hover{
+	background-position: -168px 0;
+}*/
+
+#ingame {
+	position: absolute;
+	visibility: hidden;
+	width: 890px;
+	height: 50px;
+	left: 50%;
+	margin: 50px 0 0 -440px;
+	top: 0px;
+}
+
+#buttons-ingame {
+	opacity: 0;
+}
+
+#buttons-ingame a {
+	float: left;
+}
+
+#btn-1-ingame {
+	position: relative;
+	display: block;
+	width: 138px;
+	height: 50px;
+	background: url('../images/snakeAssets/btn_1_ingame.png') no-repeat 0 0;
+}
+
+#btn-1-ingame:hover {
+	background-position: -138px 0;
+}
+
+#btn-2-ingame {
+	margin-left: -5px;
+	position: relative;
+	display: block;
+	width: 153px;
+	height: 50px;
+	background: url('../images/snakeAssets/btn_2_ingame.png') no-repeat 0 0;
+	background-position: -280px 0;
+	cursor: auto;
+}
+
+/*#btn-2-ingame:hover{
+	background-position: -138px 0;
+}*/
+
+#scoreboard {
+	font-family: 'Conv_HelveticaNeueLTCom-Bd', Sans-Serif;
+	font-size: 12px;
+	float: right;
+	opacity: 0;
+	position: relative;
+	display: block;
+	width: 292px;
+	height: 50px;
+	background: url('../images/snakeAssets/bg_scoreboard.png') no-repeat 0 0;
+	color: #ffffff;
+	text-shadow: 0px -1px 0px #414141;
+}
+#general-share-buttons {
+	position: relative;
+	left: 530px;
+	float: left;
+	top: -18px;
+	opacity: 0;
+	visibility: hidden;
+}
+#general-share-buttons a {
+	float: left;
+	margin-left: 5px;
+}
+#general-share-buttons span {
+	position: absolute;
+	/*	font-family:'Conv_HelveticaNeueLTCom-Md',Sans-Serif;*/
+}
+#btn-1-share {
+	background: url('../images/snakeAssets/face-global-share.png') no-repeat 0 0;
+	position: relative;
+	display: block;
+	width: 23px;
+	height: 42px;
+}
+#btn-2-share {
+	background: url('../images/snakeAssets/twit-global-share.png') no-repeat 0 0;
+	position: relative;
+	display: block;
+	width: 23px;
+	height: 42px;
+}
+#balloon-1 {
+	background: url('../images/snakeAssets/face-baloon.png') no-repeat 0 0;
+	width: 115px;
+	height: 29px;
+	left: -87px;
+	top: -34px;
+	color: #446fa2;
+	font-size: 12px;
+	opacity: 0;
+	padding: 10px 0 0 13px;
+	/*	display: none;*/
+}
+#balloon-2 {
+	background: url('../images/snakeAssets/twit-baloon.png') no-repeat 0 0;
+	height: 29px;
+	width: 103px;
+	left: -48px;
+	top: -34px;
+	color: #4db8e7;
+	font-size: 12px;
+	opacity: 0;
+	padding: 10px 0 0 15px;
+	/*	display: none;*/
+}
+
+#scoreboard p {
+	float: left;
+	margin: 16px 9px 0 7px;
+	width: 80px;
+}
+
+#info-1 {
+	text-align: right;
+}
+
+#info-2 {
+	text-align: left;
+}
+
+#info-3 {
+	text-align: left;
+}
+
+#info-2 span {
+	float: left;
+}
+
+.lifeimg {
+	background-image: url('../images/snakeAssets/life.png');
+	display: block;
+	height: 20px;
+	margin-left: 4px;
+	margin-top: -3px;
+	top: 13px;
+	width: 13px;
+}
+
+#game-over {
+	background-image: url('../images/snakeAssets/game-over-bg.png');
+	display: block;
+	position: absolute;
+	width: 469px;
+	height: 219px;
+	left: 50%;
+	top: -250px;
+	margin: 0 0 0 -236px;
+}
+
+#game-over-head {
+	background-image: url('../images/snakeAssets/game-over-text.png');
+	display: block;
+	position: relative;
+	width: 305px;
+	height: 57px;
+	left: 50%;
+	top: 20px;
+	margin: 0 0 0 -152px;
+}
+
+#game-over-score {
+	display: block;
+	position: relative;
+	color: #ffffff;
+	font-size: 48px;
+	width: 400px;
+	height: 57px;
+	left: 50%;
+	top: 30px;
+	margin: 0 0 0 -200px;
+	text-align: center;
+	/*	letter-spacing: -1px;*/
+	font-family: 'Conv_HelveticaNeueLTCom-BlkCn', Sans-Serif;
+	text-shadow: 0px -1px 0px #414141;
+}
+
+#game-over-buttons {
+	position: relative;
+	left: 50%;
+	top: 30px;
+	width: 366px;
+	margin: 0 0 0 -173px;
+}
+
+#game-over-buttons .b_btn {
+	float: left;
+}
+
+#game-over-buttons .b_btn:hover {
+	background-position: -124px 0;
+}
+
+#btn-1-game-over {
+	margin-right: -5px;
+	position: relative;
+	display: block;
+	width: 122px;
+	height: 46px;
+	background: url('../images/snakeAssets/game-over-scoreboard-btn1.png')
+		no-repeat 0 0;
+}
+#tooltip-game-over {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	top: 25px;
+	left: 27px;
+	display: block;
+	width: 110px;
+	height: 159px;
+	background: url('../images/snakeAssets/game-over-tt-bg.png') no-repeat 0 0;
+}
+
+#tooltip-score-board {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	top: 25px;
+	left: 27px;
+	display: block;
+	width: 110px;
+	height: 159px;
+	background: url('../images/snakeAssets/game-over-tt-bg.png') no-repeat 0 0;
+}
+
+#btn-2-game-over {
+	position: relative;
+	cursor: pointer;
+	display: block;
+	width: 122px;
+	height: 46px;
+	background: url('../images/snakeAssets/game-over-scoreboard-btn2.png')
+		no-repeat 0 0;
+}
+
+#btn-3-game-over {
+	margin-left: -5px;
+	position: relative;
+	display: block;
+	width: 122px;
+	height: 46px;
+	background: url('../images/snakeAssets/game-over-scoreboard-btn3.png')
+		no-repeat 0 0;
+}
+
+#btn-4-game-over {
+	margin-left: -5px;
+	position: relative;
+	display: block;
+	width: 162px;
+	height: 46px;
+	background: url('../images/snakeAssets/game-over-scoreboard-btn4.png')
+		no-repeat 0 0;
+}
+
+#txt-name-tt1 {
+	background: url('../images/snakeAssets/game-over-txtname-bg.png') no-repeat
+		scroll 0 0 transparent;
+	border: medium none;
+	color: #000000;
+	height: 24px;
+	margin: 16px 0 0 11px;
+	padding: 2px 4px;
+	width: 78px;
+}
+
+#txt-name-tt2 {
+	background: url('../images/snakeAssets/game-over-txtname-bg.png') no-repeat
+		scroll 0 0 transparent;
+	border: medium none;
+	color: #000000;
+	height: 24px;
+	margin: 16px 0 0 11px;
+	padding: 2px 4px;
+	width: 78px;
+}
+
+.game-over-tt-btn1 {
+	position: relative;
+	opacity: 0.3;
+	cursor: auto;
+	background-position: -107px 0;
+	top: -5px;
+	left: 3px;
+	display: block;
+	width: 105px;
+	height: 40px;
+	background: url('../images/snakeAssets/game-over-tt-btn1.png') no-repeat 0 0;
+}
+
+.game-over-tt-btn2 {
+	position: relative;
+	top: -5px;
+	left: 4px;
+	display: block;
+	width: 105px;
+	height: 40px;
+	background: url('../images/snakeAssets/game-over-tt-btn2.png') no-repeat 0 0;
+}
+
+.game-over-tt-btn3 {
+	position: relative;
+	top: -14px;
+	left: 3px;
+	display: block;
+	width: 105px;
+	height: 40px;
+	background: url('../images/snakeAssets/game-over-tt-btn3.png') no-repeat 0 0;
+}
+
+.tooltip a:hover {
+	background-position: -107px 0;
+}
+
+#score-board {
+	background-image: url('../images/snakeAssets/score-board-bg.png');
+	display: block;
+	position: absolute;
+	width: 528px;
+	height: 402px;
+	left: 50%;
+	top: -450px;
+	margin: 0 0 0 -264px;
+}
+
+#score-board-head {
+	background-image: url('../images/snakeAssets/score-board-text.png');
+	display: block;
+	position: relative;
+	width: 389px;
+	height: 57px;
+	left: 50%;
+	top: 16px;
+	margin: 0 0 0 -194px;
+}
+
+#score-board-buttons {
+	left: 50%;
+	margin: 0 0 0 -135px;
+	position: relative;
+	top: 35px;
+	width: 289px;
+}
+
+#btn-1-score-board {
+	margin-right: -5px;
+	position: relative;
+	display: block;
+	width: 122px;
+	height: 46px;
+	background: url('../images/snakeAssets/game-over-scoreboard-btn1.png')
+		no-repeat 0 0;
+}
+
+#btn-2-score-board {
+	position: relative;
+	cursor: pointer;
+	display: block;
+	width: 122px;
+	height: 46px;
+	background: url('../images/snakeAssets/game-over-scoreboard-btn2.png')
+		no-repeat 0 0;
+}
+
+#btn-4-score-board {
+	margin-top: 1px;
+	margin-left: -5px;
+	position: relative;
+	display: block;
+	width: 162px;
+	height: 46px;
+	background: url('../images/snakeAssets/game-over-scoreboard-btn4.png')
+		no-repeat 0 0;
+}
+
+#score-board-buttons .b_btn {
+	float: left;
+}
+
+#score-board-buttons .bb_btn {
+	float: left;
+}
+
+#score-board-buttons .b_btn:hover {
+	background-position: -124px 0;
+}
+
+#score-board-buttons .bb_btn:hover {
+	background-position: -165px 0;
+}
+
+#score-board-tbl1 {
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	width: 504px;
+	left: 50%;
+	top: 20px;
+	margin: 0 0 0 -252px;
+}
+
+#score-board-tbl1 tr th {
+	border-style: solid;
+	border-top-color: #004200;
+	border-top-width: 1px;
+	border-left-color: #008e00;
+	color: #cde80a;
+	font-size: 14px;
+	line-height: 15px;
+	padding-top: 7px;
+	font-weight: normal;
+	background-color: rgba(0, 0, 0, 0.35);
+	font-family: 'Conv_HelveticaNeueLTCom-HvCn', Sans-Serif;
+	text-shadow: 0px -1px 0px #414141;
+}
+
+.col1 {
+	border-left-width: 0px;
+	border-width: 1px 0 0 0;
+	text-align: center;
+	width: 40px;
+}
+
+.col2 {
+	border-width: 1px 0 0 1px;
+	text-align: center;
+	width: 80px;
+}
+
+.col3 {
+	border-width: 1px 0 0 1px;
+	text-align: center;
+	width: 57px;
+}
+
+.col4 {
+	border-width: 1px 0 0 1px;
+	text-align: left;
+	text-indent: 10px;
+}
+
+.col5 {
+	border-width: 1px 0 0 1px;
+	text-align: left;
+	text-indent: 10px;
+	width: 101px;
+}
+
+#score-board-tbl2 {
+	border-collapse: collapse;
+	padding: 0px;
+	border-style: solid;
+	border-color: #004200;
+	border-width: 0 0 1px 0;
+	position: relative;
+	width: 504px;
+}
+
+#score-board-tbl2 tr td {
+	color: #ffffff;
+	border-style: solid;
+	border-color: #008e00;
+	font-size: 14px;
+	height: 0px;
+	line-height: 13px;
+	padding-top: 6px;
+	font-weight: normal;
+	background-color: rgba(0, 0, 0, 0.23);
+	font-family: 'Conv_HelveticaNeueLTCom-Md', Sans-Serif;
+}
+
+.score-board-btn {
+	cursor: pointer;
+	position: absolute;
+	width: 66px;
+	height: 46px;
+	left: 519px;
+	background-position: -30px 0;
+	background-repeat: no-repeat;
+}
+
+#score-board-btnup {
+	top: 95px;
+	background-image: url('../images/snakeAssets/score-board-up-btn.png');
+}
+
+#score-board-btndown {
+	top: 278px;
+	background-image: url('../images/snakeAssets/score-board-down-btn.png');
+}
+
+#tbl-container {
+	position: relative;
+	height: 210px;
+	top: 20px;
+	left: 12px;
+	width: 504px;
+	overflow: hidden;
+	border-style: solid;
+	border-color: #004200;
+	border-width: 0 0 1px 0;
+}
+#footer {
+	position: relative;
+	opacity: 0;
+	visibility: hidden;
+	top: -11px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #004200;
+	font-family: 'Conv_HelveticaNeueLTCom-Md', Sans-Serif;
+	/*	left:50%;*/
+	text-align: center;
+}
+#footer a {
+	color: #004200;
+	text-decoration: none;
+}
+#footer a:hover {
+	text-decoration: underline;
+}
